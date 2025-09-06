@@ -1,0 +1,105 @@
+/* === Base Reset === */
+* {
+    background-image: none;
+    font-size: 16px;
+}
+
+/* === Colors from theme.css (inlined) === */
+@define-color bar-bg rgba(31, 35, 40, 0.95);
+
+@define-color main-bg #101419;
+@define-color main-fg #93cee9;
+
+@define-color wb-act-bg #93cee9;
+@define-color wb-act-fg #1f2328;
+
+@define-color wb-hvr-bg #93cee9;
+@define-color wb-hvr-fg #1f2328;
+
+/* === Window === */
+window {
+    background-color: @bar-bg;
+}
+
+/* === Buttons === */
+button {
+    color: @main-fg;
+    background-color: @main-bg;
+    outline: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+    transition: all 0.3s ease;
+}
+
+/* Focused Button */
+button:focus {
+    background-color: @wb-act-bg;
+    color: @wb-act-fg;
+    background-size: 28px;
+}
+
+/* Hover Effect */
+button:hover {
+    background-color: @wb-hvr-bg;
+    color: @wb-hvr-fg;
+    background-size: 32px;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(147, 206, 233, 0.4);
+    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682);
+}
+
+/* === Button IDs with icons and positions === */
+
+/* These values can be adjusted as needed */
+@define-color icon-path #000;
+@define-color icon-shadow rgba(0,0,0,0.2);
+
+#lock {
+    background-image: image(url("/home/yogesh/.config/wlogout/icons/lock_black.png"));
+    border-radius: 16px 0px 0px 0px;
+    margin: 40px 0px 0px 40px;
+}
+
+#hibernate {
+    background-image: image(url("/home/yogesh/.config/wlogout/icons/hibernate_black.png"));
+    border-radius: 0px 0px 0px 16px;
+    margin: 0px 0px 40px 40px;
+}
+
+#shutdown {
+    background-image: image(url("/home/yogesh/.config/wlogout/icons/shutdown_black.png"));
+    border-radius: 0px 16px 0px 0px;
+    margin: 40px 40px 0px 0px;
+}
+
+#reboot {
+    background-image: image(url("/home/yogesh/.config/wlogout/icons/reboot_black.png"));
+    border-radius: 0px 0px 16px 0px;
+    margin: 0px 40px 40px 0px;
+}
+
+/* === Hover Overrides for Each Button === */
+button:hover#lock {
+    border-radius: 16px 16px 0px 16px;
+    margin: 30px 0px 0px 30px;
+}
+
+button:hover#logout {
+    border-radius: 0px 0px 0px 16px;
+    margin: 0px 0px 30px 30px;
+}
+
+button:hover#shutdown {
+    border-radius: 0px 16px 0px 0px;
+    margin: 30px 30px 0px 0px;
+}
+
+button:hover#reboot {
+    border-radius: 0px 0px 16px 0px;
+    margin: 0px 30px 30px 0px;
+}

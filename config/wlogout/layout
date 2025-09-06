@@ -1,0 +1,27 @@
+{
+    "label": "lock",
+    "action": "~/.config/wlogout/actions --suspend",
+    "text": "Lock",
+    "keybind": "l"
+}
+
+{
+    "label": "hibernate",
+    "action": "~/.config/wlogout/actions --hibernate",
+    "text": "hibernate",
+    "keybind": "h"
+}
+
+{
+    "label": "shutdown",
+    "action": "~/.config/wlogout/actions --shutdown",
+    "text": "Shutdown",
+    "keybind": "s"
+}
+
+{
+    "label": "reboot",
+    "action": "~/.config/wlogout/actions --reboot",
+    "text": "Reboot",
+    "keybind": "r"
+}

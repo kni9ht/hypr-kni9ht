@@ -1,0 +1,15 @@
+{
+  "include": "~/.config/waybar/modules",
+  "layer": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "fixed-center": false,
+  "spacing": 3,
+  "gtk-layer-shell": true,
+  "margin": 5,
+
+  "modules-left": ["hyprland/workspaces", "cpu", "custom/cputemp", "memory", "disk", "custom/uptime", "custom/waybar-mpris"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["idle_inhibitor", "backlight", "pulseaudio", "custom/vpn_check", "battery", "tray", "clock"],
+}
